@@ -1,0 +1,10 @@
+com\alexscott\connectfourapi\GameState.class
+com\alexscott\connectfourapi\ExceptionControllerAdvice.class
+com\alexscott\connectfourapi\NewGameRequest.class
+com\alexscott\connectfourapi\GameController.class
+com\alexscott\connectfourapi\Board.class
+com\alexscott\connectfourapi\FaultResponse.class
+com\alexscott\connectfourapi\ColumnOutOfBoundsException.class
+com\alexscott\connectfourapi\Game.class
+com\alexscott\connectfourapi\GameStatus.class
+com\alexscott\connectfourapi\Application.class
