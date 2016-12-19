@@ -4,10 +4,10 @@ Connect Four Restful API
 Simple little API to facilitate a game of Connect 4. Developed rather quickly over the weekend, hopefully it will give a nod that I know a little bit of coding. I'm sure there are some logic issues remaining (such as what happens when tokens get higher than the top of the game grid).
 
 Libraries used;
-- Spring boot
+- Spring Boot
 - Spring Rest
-- Jackson JSON serialisation/deserialisation
-- Javax validation
+- Jersey/Jackson JSON serialisation
+- Javax Validation
 - JUnit
 
 To use;
