@@ -26,13 +26,15 @@ public class Board {
         if (column < 0 || column > WIDTH) {
             throw new ColumnOutOfBoundsException("Column " + column + " not in range.");
         }
+
         for (int h = 0; h < HEIGHT; h++) {
             if (grid[column][h] == 0) {
                 grid[column][h] = player;
-                break;
+                return winCondition();
             }
         }
-        return winCondition();
+
+        throw new ColumnOutOfBoundsException("Column " + column + " is completely full.");
     }
 
     /***
