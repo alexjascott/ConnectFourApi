@@ -113,4 +113,44 @@ public class BoardTest {
 
         assertEquals(false, board.winCondition());
     }
+
+    @Test
+    public void outOfRangeWidthBelow() throws Exception {
+        Board board = new Board();
+
+        try {
+            board.move(-1, 1);
+        } catch (ColumnOutOfBoundsException coobe) {
+            assertEquals("Column -1 not in range.", coobe.getMessage());
+        }
+    }
+
+    @Test
+    public void outOfRangeWidthAbove() throws Exception {
+        Board board = new Board();
+
+        try {
+            board.move(22, 1);
+        } catch (ColumnOutOfBoundsException coobe) {
+            assertEquals("Column 22 not in range.", coobe.getMessage());
+        }
+    }
+
+    @Test
+    public void outOfRangeHeight() throws Exception {
+        Board board = new Board();
+
+        board.move(2, 1);
+        board.move(2, 2);
+        board.move(2, 1);
+        board.move(2, 2);
+        board.move(2, 1);
+        board.move(2, 2);
+
+        try {
+            board.move(2, 1);
+        } catch (ColumnOutOfBoundsException coobe) {
+            assertEquals("Column 2 is completely full.", coobe.getMessage());
+        }
+    }
 }
